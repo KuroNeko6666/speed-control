@@ -14,9 +14,7 @@ use App\Http\Controllers\TemplateController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [TemplateController::class, 'Dashboard']);
 Route::get('/login', function () {
     return view('auth/login');
 });
