@@ -10,7 +10,9 @@ export default defineConfig({
     ],
     server: {
         port: 8001,
-        hmr: false,
+        hmr: {
+            host: 'localhost',
+        },
         https: false,
     }
 });
