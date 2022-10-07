@@ -19,7 +19,7 @@
 
     <!-- Custom styles for this template-->
     {{-- <link href="/css/sb-admin-2.css" rel="stylesheet"> --}}
-    @vite(['public/scss/sb-admin-2.scss'], ['resources/css/app.css'])
+    @vite(['resources/assets/scss/sb-admin-2.scss'], ['resources/css/app.css'])
 
 </head>
 
