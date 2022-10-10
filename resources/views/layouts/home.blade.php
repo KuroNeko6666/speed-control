@@ -18,14 +18,9 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-<<<<<<< Updated upstream
-    {{-- <link href="/css/sb-admin-2.css" rel="stylesheet"> --}}
-    @vite(['resources/assets/scss/sb-admin-2.scss'], ['resources/css/app.css'])
-=======
     {{-- <link href="/css/sb-admin-2.min.css" rel="stylesheet"> --}}
     @vite(['public/scss/sb-admin-2.scss'], ['resources/css/app.css'])
     @livewireStyles
->>>>>>> Stashed changes
 
 
 </head>
@@ -63,9 +58,6 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-<<<<<<< Updated upstream
-    @include('partials.home.script')
-=======
     <!-- Bootstrap core JavaScript-->
     <script src="/vendor/jquery/jquery.min.js"></script>
     <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -83,7 +75,6 @@
     <script src="/js/demo/chart-area-demo.js"></script>
     <script src="/js/demo/chart-pie-demo.js"></script>
     @livewireScripts
->>>>>>> Stashed changes
 
 </body>
 

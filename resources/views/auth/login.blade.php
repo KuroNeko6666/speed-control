@@ -1,6 +1,3 @@
-<<<<<<< Updated upstream
-@extends('layouts/auth')
-=======
 @extends('layouts.auth')
 @section('container')
 <div class="card o-hidden border-0 shadow-lg my-5">
@@ -27,4 +24,3 @@
     </div>
 </div>
 @endsection
->>>>>>> Stashed changes
