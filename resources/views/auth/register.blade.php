@@ -1,6 +1,3 @@
-<<<<<<< Updated upstream
-@extends('layouts/auth')
-=======
 @extends('layouts.auth')
 @section('container')
 <div class="card o-hidden border-0 shadow-lg my-5">
@@ -11,15 +8,12 @@
             <div class="col-lg-6">
                 <div class="p-5">
                     <div class="text-center">
-                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                        <h1 class="h4 text-gray-900 mb-4">Register</h1>
                     </div>
-                    @livewire('auth.login')
+                    @livewire('auth.register')
                     <hr>
                     <div class="text-center">
-                        <a class="small" href="forgot-password.html">Forgot Password?</a>
-                    </div>
-                    <div class="text-center">
-                        <a class="small" href="/register">Create an Account!</a>
+                        <a class="small" href="/login">Have account? login</a>
                     </div>
                 </div>
             </div>
@@ -27,4 +21,3 @@
     </div>
 </div>
 @endsection
->>>>>>> Stashed changes

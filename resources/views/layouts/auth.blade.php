@@ -18,7 +18,9 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    {{-- <link href="css/sb-admin-2.min.css" rel="stylesheet"> --}}
+    @vite(['public/scss/sb-admin-2.scss'], ['resources/css/app.css'])
+    @livewireStyles
 
 </head>
 
@@ -29,7 +31,13 @@
         <!-- Outer Row -->
         <div class="row justify-content-center">
 
+<<<<<<< Updated upstream
             <div class="col-xl-7 col-lg-8 col-md-9">
+=======
+            <div class="col-xl-10 col-lg-12 col-md-9">
+
+                @yield('container')
+>>>>>>> Stashed changes
 
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
@@ -72,7 +80,9 @@
                     </div>
                 </div>
             </div>
+
         </div>
+
     </div>
 
     <!-- Bootstrap core JavaScript-->
@@ -84,6 +94,7 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+    @livewireScripts
 
 </body>
 
