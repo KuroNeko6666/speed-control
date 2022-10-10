@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TemplateController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ViewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,23 +15,26 @@ use App\Http\Controllers\TemplateController;
 |
 */
 
-Route::get('/', [TemplateController::class, 'Dashboard']);
-Route::get('/login', function () {
-    return view('auth/login');
+Route::middleware(['guest'])->group(function () {
+    Route::get('/login', [AuthController::class, 'viewLogin'])->name('login');
+    Route::post('/login', [AuthController::class, 'login']);
+    Route::get('/register', [AuthController::class, 'viewRegister'])->name('register');
+    Route::post('/register', [AuthController::class, 'register']);
 });
 
-Route::get('/home', [TemplateController::class, 'Dashboard']);
-Route::get('/chart', [TemplateController::class, 'Chart']);
-Route::get('/table', [TemplateController::class, 'Table']);
-Route::get('/component/button', [TemplateController::class, 'Button']);
-Route::get('/component/card', [TemplateController::class, 'Card']);
-Route::get('/pages/blank', [TemplateController::class, 'Blank']);
-Route::get('/pages/forgot', [TemplateController::class, 'Forgot']);
-Route::get('/pages/login', [TemplateController::class, 'Login']);
-Route::get('/pages/404', [TemplateController::class, 'NotFound']);
-Route::get('/pages/register', [TemplateController::class, 'Register']);
-Route::get('/utilities/animation', [TemplateController::class, 'Animation']);
-Route::get('/utilities/border', [TemplateController::class, 'Border']);
-Route::get('/utilities/color', [TemplateController::class, 'Color']);
-Route::get('/utilities/other', [TemplateController::class, 'Other']);
-
+Route::middleware(['auth'])->group(function () {
+    Route::get('/home', [ViewController::class, 'Dashboard'])->name('home');
+    Route::get('/chart', [ViewController::class, 'Chart']);
+    Route::get('/table', [ViewController::class, 'Table']);
+    Route::get('/component/button', [ViewController::class, 'Button']);
+    Route::get('/component/card', [ViewController::class, 'Card']);
+    Route::get('/pages/blank', [ViewController::class, 'Blank']);
+    Route::get('/pages/forgot', [ViewController::class, 'Forgot']);
+    Route::get('/pages/login', [ViewController::class, 'Login']);
+    Route::get('/pages/404', [ViewController::class, 'NotFound']);
+    Route::get('/pages/register', [ViewController::class, 'Register']);
+    Route::get('/utilities/animation', [ViewController::class, 'Animation']);
+    Route::get('/utilities/border', [ViewController::class, 'Border']);
+    Route::get('/utilities/color', [ViewController::class, 'Color']);
+    Route::get('/utilities/other', [ViewController::class, 'Other']);
+});

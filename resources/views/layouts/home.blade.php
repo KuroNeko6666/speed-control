@@ -18,8 +18,9 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    {{-- <link href="/css/sb-admin-2.css" rel="stylesheet"> --}}
-    @vite(['resources/assets/scss/sb-admin-2.scss'], ['resources/css/app.css'])
+    <link href="/css/sb-admin-2.css" rel="stylesheet">
+    {{-- @vite(['resources/assets/scss/sb-admin-2.scss'], ['resources/css/app.css']) --}}
+    @livewireStyles
 
 </head>
 
@@ -47,6 +48,7 @@
     </a>
 
     @include('partials.home.script')
+    @livewireScripts
 
 </body>
 
