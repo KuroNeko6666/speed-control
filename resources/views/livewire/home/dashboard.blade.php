@@ -95,7 +95,7 @@
         </div>
 
         <!-- Content Row -->
-        @if (count($selected['device']))
+        @if ($selected['device'] != [])
         <div class="btn-group mb-2">
             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
               {{ $selected['device']['name'] }}
