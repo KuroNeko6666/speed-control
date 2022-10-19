@@ -77,7 +77,7 @@
     <script src="/js/demo/chart-pie-demo.js"></script>
     @livewireScripts
 
-    @if ($data_created)
+    @if (($data_created))
         <script type="text/javascript">
             let data_register = @json($data_created);
             let date = Object.keys(data_register).reverse();

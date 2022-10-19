@@ -9,23 +9,6 @@ class DataSidebar
             'sub_menus' => null,
             'active' => false,
         ],
-        'master' =>[
-            'name' => 'Master',
-            'path' => '/master',
-            'active' => false,
-            'sub_menus' => [
-                'data_1' => [
-                    'name' => 'data_1',
-                    'path' => '/',
-                    'active' => false,
-                ],
-                'data_2' => [
-                    'name' => 'data_2',
-                    'path' => '/',
-                    'active' => false,
-                ],
-            ],
-        ],
     ];
     public function data($active, $sub_active = null){
         if($sub_active == null){
