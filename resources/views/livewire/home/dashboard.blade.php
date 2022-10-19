@@ -183,8 +183,6 @@
         @endif
 
     </div>
-    <!-- /.container-fluid -->
-    {{-- {{ dd($selected['data_created']->toJson()) }} --}}
 
 
 </div>
