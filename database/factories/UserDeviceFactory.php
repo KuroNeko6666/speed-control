@@ -18,7 +18,7 @@ class UserDeviceFactory extends Factory
     {
         return [
             'user_id' => mt_rand(1,2),
-            'device_id' => mt_rand(1,5),
+            'device_id' => mt_rand(1,10),
         ];
     }
 }

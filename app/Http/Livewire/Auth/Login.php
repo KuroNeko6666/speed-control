@@ -6,24 +6,26 @@ use Livewire\Component;
 
 class Login extends Component
 {
+
     public $email, $password;
 
     protected $rules = [
         'email' => 'required|email',
-        'password' => 'required',
+        'password' => 'required'
     ];
 
-    public function login() {
-        $credential = $this->validate();
+    public function login(){
 
-       if(auth()->attempt($credential)){
-           return redirect()->route('home');
-       }
-       return redirect()->route('login')->with('error', 'Email or Password wrong');
-   }
+        $data = $this->validate();
+        if(auth()->guard('web')->attempt($data)){
+            return redirect()->route('home');
+        }
+        session()->flash('error', 'Invalid email or password');
+    }
 
-   public function render()
-   {
-       return view('livewire.auth.login');
-   }
+    public function render()
+    {
+        return view('livewire.auth.login')
+        ->layout('layouts.auth');
+    }
 }

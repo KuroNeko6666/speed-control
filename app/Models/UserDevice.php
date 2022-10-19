@@ -13,11 +13,11 @@ class UserDevice extends Model
 
     protected $guarded = ['id'];
 
-    public function user(){
+    public function user() {
         return $this->belongsTo(User::class, 'user_id');
     }
 
-    public function device(){
+    public function device() {
         return $this->belongsTo(Device::class, 'device_id');
     }
 }

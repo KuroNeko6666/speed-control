@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit745f06de2b5edc57a1b097c84df3639c
+class ComposerStaticInit66c6f183e53d102159869ad3f6e6e47d
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -513,17 +513,16 @@ class ComposerStaticInit745f06de2b5edc57a1b097c84df3639c
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
-        'App\\Http\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthController.php',
+        'App\\Http\\Controllers\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
-        'App\\Http\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/DashboardController.php',
+        'App\\Http\\Controllers\\DataDeviceController' => __DIR__ . '/../..' . '/app/Http/Controllers/DataDeviceController.php',
         'App\\Http\\Controllers\\DeviceController' => __DIR__ . '/../..' . '/app/Http/Controllers/DeviceController.php',
-        'App\\Http\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/LoginController.php',
-        'App\\Http\\Controllers\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/RegisterController.php',
         'App\\Http\\Controllers\\UserDeviceController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserDeviceController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Livewire\\Auth\\Login' => __DIR__ . '/../..' . '/app/Http/Livewire/Auth/Login.php',
         'App\\Http\\Livewire\\Auth\\Logout' => __DIR__ . '/../..' . '/app/Http/Livewire/Auth/Logout.php',
         'App\\Http\\Livewire\\Auth\\Register' => __DIR__ . '/../..' . '/app/Http/Livewire/Auth/Register.php',
+        'App\\Http\\Livewire\\Home\\Dashboard' => __DIR__ . '/../..' . '/app/Http/Livewire/Home/Dashboard.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\PreventRequestsDuringMaintenance' => __DIR__ . '/../..' . '/app/Http/Middleware/PreventRequestsDuringMaintenance.php',
@@ -533,14 +532,22 @@ class ComposerStaticInit745f06de2b5edc57a1b097c84df3639c
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Requests\\StoreAdminRequest' => __DIR__ . '/../..' . '/app/Http/Requests/StoreAdminRequest.php',
+        'App\\Http\\Requests\\StoreDataDeviceRequest' => __DIR__ . '/../..' . '/app/Http/Requests/StoreDataDeviceRequest.php',
         'App\\Http\\Requests\\StoreDeviceRequest' => __DIR__ . '/../..' . '/app/Http/Requests/StoreDeviceRequest.php',
         'App\\Http\\Requests\\StoreUserDeviceRequest' => __DIR__ . '/../..' . '/app/Http/Requests/StoreUserDeviceRequest.php',
+        'App\\Http\\Requests\\UpdateAdminRequest' => __DIR__ . '/../..' . '/app/Http/Requests/UpdateAdminRequest.php',
+        'App\\Http\\Requests\\UpdateDataDeviceRequest' => __DIR__ . '/../..' . '/app/Http/Requests/UpdateDataDeviceRequest.php',
         'App\\Http\\Requests\\UpdateDeviceRequest' => __DIR__ . '/../..' . '/app/Http/Requests/UpdateDeviceRequest.php',
         'App\\Http\\Requests\\UpdateUserDeviceRequest' => __DIR__ . '/../..' . '/app/Http/Requests/UpdateUserDeviceRequest.php',
-        'App\\Models\\Data' => __DIR__ . '/../..' . '/app/Models/Data.php',
+        'App\\Models\\Admin' => __DIR__ . '/../..' . '/app/Models/Admin.php',
+        'App\\Models\\DataDevice' => __DIR__ . '/../..' . '/app/Models/DataDevice.php',
         'App\\Models\\Device' => __DIR__ . '/../..' . '/app/Models/Device.php',
+        'App\\Models\\Operator' => __DIR__ . '/../..' . '/app/Models/Operator.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Models\\UserDevice' => __DIR__ . '/../..' . '/app/Models/UserDevice.php',
+        'App\\Policies\\AdminPolicy' => __DIR__ . '/../..' . '/app/Policies/AdminPolicy.php',
+        'App\\Policies\\DataDevicePolicy' => __DIR__ . '/../..' . '/app/Policies/DataDevicePolicy.php',
         'App\\Policies\\DevicePolicy' => __DIR__ . '/../..' . '/app/Policies/DevicePolicy.php',
         'App\\Policies\\UserDevicePolicy' => __DIR__ . '/../..' . '/app/Policies/UserDevicePolicy.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
@@ -654,10 +661,14 @@ class ComposerStaticInit745f06de2b5edc57a1b097c84df3639c
         'Cron\\HoursField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/HoursField.php',
         'Cron\\MinutesField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MinutesField.php',
         'Cron\\MonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
-        'Database\\Factories\\DataFactory' => __DIR__ . '/../..' . '/database/factories/DataFactory.php',
+        'Database\\Factories\\AdminFactory' => __DIR__ . '/../..' . '/database/factories/AdminFactory.php',
+        'Database\\Factories\\DataDeviceFactory' => __DIR__ . '/../..' . '/database/factories/DataDeviceFactory.php',
         'Database\\Factories\\DeviceFactory' => __DIR__ . '/../..' . '/database/factories/DeviceFactory.php',
+        'Database\\Factories\\OperatorFactory' => __DIR__ . '/../..' . '/database/factories/OperatorFactory.php',
         'Database\\Factories\\UserDeviceFactory' => __DIR__ . '/../..' . '/database/factories/UserDeviceFactory.php',
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
+        'Database\\Seeders\\AdminSeeder' => __DIR__ . '/../..' . '/database/seeders/AdminSeeder.php',
+        'Database\\Seeders\\DataDeviceSeeder' => __DIR__ . '/../..' . '/database/seeders/DataDeviceSeeder.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
         'Database\\Seeders\\DeviceSeeder' => __DIR__ . '/../..' . '/database/seeders/DeviceSeeder.php',
         'Database\\Seeders\\UserDeviceSeeder' => __DIR__ . '/../..' . '/database/seeders/UserDeviceSeeder.php',
@@ -1927,6 +1938,7 @@ class ComposerStaticInit745f06de2b5edc57a1b097c84df3639c
         'Illuminate\\Database\\Eloquent\\JsonEncodingException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Eloquent/JsonEncodingException.php',
         'Illuminate\\Database\\Eloquent\\MassAssignmentException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Eloquent/MassAssignmentException.php',
         'Illuminate\\Database\\Eloquent\\MassPrunable' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Eloquent/MassPrunable.php',
+        'Illuminate\\Database\\Eloquent\\MissingAttributeException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Eloquent/MissingAttributeException.php',
         'Illuminate\\Database\\Eloquent\\Model' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Eloquent/Model.php',
         'Illuminate\\Database\\Eloquent\\ModelNotFoundException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Eloquent/ModelNotFoundException.php',
         'Illuminate\\Database\\Eloquent\\Prunable' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Eloquent/Prunable.php',
@@ -2253,6 +2265,11 @@ class ComposerStaticInit745f06de2b5edc57a1b097c84df3639c
         'Illuminate\\Mail\\MailManager' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Mail/MailManager.php',
         'Illuminate\\Mail\\MailServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Mail/MailServiceProvider.php',
         'Illuminate\\Mail\\Mailable' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Mail/Mailable.php',
+        'Illuminate\\Mail\\Mailables\\Address' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Mail/Mailables/Address.php',
+        'Illuminate\\Mail\\Mailables\\Attachment' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Mail/Mailables/Attachment.php',
+        'Illuminate\\Mail\\Mailables\\Content' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Mail/Mailables/Content.php',
+        'Illuminate\\Mail\\Mailables\\Envelope' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Mail/Mailables/Envelope.php',
+        'Illuminate\\Mail\\Mailables\\Headers' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Mail/Mailables/Headers.php',
         'Illuminate\\Mail\\Mailer' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Mail/Mailer.php',
         'Illuminate\\Mail\\Markdown' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Mail/Markdown.php',
         'Illuminate\\Mail\\Message' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Mail/Message.php',
@@ -2397,6 +2414,8 @@ class ComposerStaticInit745f06de2b5edc57a1b097c84df3639c
         'Illuminate\\Routing\\Controller' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/Controller.php',
         'Illuminate\\Routing\\ControllerDispatcher' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php',
         'Illuminate\\Routing\\ControllerMiddlewareOptions' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/ControllerMiddlewareOptions.php',
+        'Illuminate\\Routing\\Controllers\\HasMiddleware' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/Controllers/HasMiddleware.php',
+        'Illuminate\\Routing\\Controllers\\Middleware' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/Controllers/Middleware.php',
         'Illuminate\\Routing\\CreatesRegularExpressionRouteConstraints' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/CreatesRegularExpressionRouteConstraints.php',
         'Illuminate\\Routing\\Events\\RouteMatched' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/Events/RouteMatched.php',
         'Illuminate\\Routing\\Events\\Routing' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/Events/Routing.php',
@@ -5779,10 +5798,10 @@ class ComposerStaticInit745f06de2b5edc57a1b097c84df3639c
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit745f06de2b5edc57a1b097c84df3639c::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit745f06de2b5edc57a1b097c84df3639c::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit745f06de2b5edc57a1b097c84df3639c::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit745f06de2b5edc57a1b097c84df3639c::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit66c6f183e53d102159869ad3f6e6e47d::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit66c6f183e53d102159869ad3f6e6e47d::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit66c6f183e53d102159869ad3f6e6e47d::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit66c6f183e53d102159869ad3f6e6e47d::$classMap;
 
         }, null, ClassLoader::class);
     }

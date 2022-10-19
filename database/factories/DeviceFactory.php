@@ -18,7 +18,7 @@ class DeviceFactory extends Factory
     {
         return [
             'name' => fake()->name(),
-            'location' => fake()->address(),
+            'location' => fake()->address()
         ];
     }
 }

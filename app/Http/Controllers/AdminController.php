@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreDataRequest;
-use App\Http\Requests\UpdateDataRequest;
-use App\Models\Data;
+use App\Http\Requests\StoreAdminRequest;
+use App\Http\Requests\UpdateAdminRequest;
+use App\Models\Admin;
 
-class DataController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class DataController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreDataRequest  $request
+     * @param  \App\Http\Requests\StoreAdminRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreDataRequest $request)
+    public function store(StoreAdminRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class DataController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Data  $data
+     * @param  \App\Models\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function show(Data $data)
+    public function show(Admin $admin)
     {
         //
     }
@@ -53,10 +53,10 @@ class DataController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Data  $data
+     * @param  \App\Models\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function edit(Data $data)
+    public function edit(Admin $admin)
     {
         //
     }
@@ -64,11 +64,11 @@ class DataController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateDataRequest  $request
-     * @param  \App\Models\Data  $data
+     * @param  \App\Http\Requests\UpdateAdminRequest  $request
+     * @param  \App\Models\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateDataRequest $request, Data $data)
+    public function update(UpdateAdminRequest $request, Admin $admin)
     {
         //
     }
@@ -76,10 +76,10 @@ class DataController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Data  $data
+     * @param  \App\Models\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Data $data)
+    public function destroy(Admin $admin)
     {
         //
     }

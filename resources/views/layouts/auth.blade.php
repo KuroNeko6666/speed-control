@@ -19,28 +19,14 @@
 
     <!-- Custom styles for this template-->
     {{-- <link href="css/sb-admin-2.min.css" rel="stylesheet"> --}}
-    @vite(['public/scss/sb-admin-2.scss'], ['resources/css/app.css'])
+    @vite(['public/scss/sb-admin-2.scss', 'resources/css/app.css'])
     @livewireStyles
-
 
 </head>
 
 <body class="bg-gradient-primary">
 
-    <div class="container">
-
-        <!-- Outer Row -->
-        <div class="row justify-content-center">
-
-            <div class="col-xl-10 col-lg-12 col-md-9">
-
-                @yield('container')
-
-            </div>
-
-        </div>
-
-    </div>
+    {{ $slot }}
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>

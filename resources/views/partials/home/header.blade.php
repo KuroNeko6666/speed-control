@@ -201,6 +201,3 @@
 
 </nav>
 <!-- End of Topbar -->
-
-
-@livewire('auth.logout')

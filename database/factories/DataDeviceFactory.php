@@ -3,12 +3,11 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Carbon\Carbon;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Data>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\DataDevice>
  */
-class DataFactory extends Factory
+class DataDeviceFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,9 +17,8 @@ class DataFactory extends Factory
     public function definition()
     {
         return [
-            'device_id' => mt_rand(1,5),
-            'waktu' => Carbon::now(),
-            'kecepatan' => mt_rand(40, 90),
+            'device_id' => mt_rand(1,10),
+            'speed' => mt_rand(30, 100)
         ];
     }
 }
