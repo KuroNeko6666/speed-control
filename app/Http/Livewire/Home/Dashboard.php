@@ -22,7 +22,7 @@ class Dashboard extends Component
         $all_device = collect([]);
         $all_speed = collect([]);
         $all_data = collect([]);
-        $selected_device = collect([]);
+        $selected_device = null;
         $selected_data = collect([]);
         $slow = collect([]);
         $normal = collect([]);
