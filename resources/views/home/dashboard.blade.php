@@ -1,11 +1,14 @@
-<div>
+@extends('layouts.home')
+
+@section('container')
     <!-- Begin Page Content -->
     <div class="container-fluid">
 
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-
+            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                    class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
         </div>
 
         <!-- Content Row -->
@@ -18,8 +21,8 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                    Device</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $all['device']->count() }}</div>
+                                    Jumlah Device</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $device->count() }}</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -36,8 +39,8 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                    Average</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $all['average'] }}</div>
+                                    Rata rata kecepatan</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $average }}</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -53,18 +56,13 @@
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Total kendaraan
                                 </div>
                                 <div class="row no-gutters align-items-center">
                                     <div class="col-auto">
-                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{ $vehicle }}</div>
                                     </div>
-                                    <div class="col">
-                                        <div class="progress progress-sm mr-2">
-                                            <div class="progress-bar bg-info" role="progressbar" style="width: 50%"
-                                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                             <div class="col-auto">
@@ -93,19 +91,21 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col mb-4">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ $device_name }}
+                </button>
+                <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuButton">
+                    @foreach ($device as $item)
+                        <a class="dropdown-item" href="?device={{ $item->device()->first()->id }}">{{ $item->device()->first()->name }}</a>
+                    @endforeach
+                </div>
+            </div>
+        </div>
 
         <!-- Content Row -->
-        @if (is_null($selected['device']))
-        <div class="btn-group mb-2">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-              {{ $selected['device']['name'] }}
-            </button>
-            <div class="dropdown-menu">
-                @foreach ($all['device'] as $device)
-                <a class="dropdown-item" href="/home?device={{ $device['id'] }}" >{{ $device['name'] }}</a>
-                @endforeach
-            </div>
-          </div>
 
         <div class="row">
 
@@ -114,7 +114,7 @@
                 <div class="card shadow mb-4">
                     <!-- Card Header - Dropdown -->
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                        <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">Kepadatan Lalu Lintas</h6>
                         <div class="dropdown no-arrow">
                             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -144,7 +144,7 @@
                 <div class="card shadow mb-4">
                     <!-- Card Header - Dropdown -->
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                        <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">Rata rata kepatuhan</h6>
                         <div class="dropdown no-arrow">
                             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -167,22 +167,20 @@
                         </div>
                         <div class="mt-4 text-center small">
                             <span class="mr-2">
-                                <i class="fas fa-circle text-primary"></i> Fast
+                                <i class="fas fa-circle text-primary"></i> Direct
                             </span>
                             <span class="mr-2">
-                                <i class="fas fa-circle text-success"></i> Normal
+                                <i class="fas fa-circle text-success"></i> Social
                             </span>
                             <span class="mr-2">
-                                <i class="fas fa-circle text-info"></i> Slow
+                                <i class="fas fa-circle text-info"></i> Referral
                             </span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        @endif
-
+yr75
     </div>
-
-
-</div>
+    <!-- /.container-fluid -->
+@endsection
