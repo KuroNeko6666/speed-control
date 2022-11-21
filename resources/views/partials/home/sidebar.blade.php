@@ -15,7 +15,7 @@
     @foreach ($menus as $menu)
         @if ($menu['sub_menus'] == null)
         <li class="nav-item {{ $menu['active'] ? 'active' : '' }} ">
-            <a class="nav-link" href="/">
+            <a class="nav-link" href={{ $menu['path'] }}>
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>{{ $menu['name'] }}</span></a>
         </li>

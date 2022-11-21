@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Home\Data;
 use App\Http\Livewire\Auth\Login;
 use App\Http\Livewire\Auth\Register;
 use App\Http\Livewire\Home\Dashboard;
@@ -22,6 +23,7 @@ Route::get('/', function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', Dashboard::class)->name('home');
+    Route::get('/data', Data::class)->name('data');
 });
 
 Route::middleware(['guest'])->group(function () {
