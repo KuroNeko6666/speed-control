@@ -180,7 +180,6 @@
                 </div>
             </div>
         </div>
-yr75
     </div>
     <!-- /.container-fluid -->
 @endsection

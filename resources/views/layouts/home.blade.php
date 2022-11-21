@@ -121,7 +121,7 @@
                 data: {
                     labels: date,
                     datasets: [{
-                        label: "Registrasi Pengguna",
+                        label: "Kendaraan lewat",
                         lineTension: 0.3,
                         backgroundColor: "rgba(78, 115, 223, 0.05)",
                         borderColor: "rgba(78, 115, 223, 1)",
